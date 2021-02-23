@@ -1,3 +1,4 @@
+require('../css/app.css');
 window.myclick = ()=>{
    // document.getElementById('textarea').value;
     // var el = document.getElementById('myiframe');
@@ -7,4 +8,5 @@ window.myclick = ()=>{
     mydocument.write(document.getElementById('textarea').value);
     mydocument.close();
     console.log(document);
+    console.log(2);
 }
