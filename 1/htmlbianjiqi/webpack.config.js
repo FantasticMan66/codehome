@@ -9,10 +9,16 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader"],
+      // },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+ 
+        test: /\.less$/,
+        use: ["style-loader", "css-loader","less-loader"]
       },
+
     ],
   },
   mode: "development", //开发模式，没有对js等文件压缩，默认生成的是压缩文件

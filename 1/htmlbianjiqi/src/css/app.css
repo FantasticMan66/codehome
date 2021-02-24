@@ -54,9 +54,13 @@ code {
 .parent textarea {
   overflow: auto;
   height: 432px;
-  width: 609px;
+  width: calc(100% - 4px);
   resize: none;
   border: none;
+  outline: none;
+}
+.parent textarea:focus {
+  outline: 1px solid #9300ff;
 }
 .parent iframe {
   overflow: auto;

@@ -1,4 +1,5 @@
-require('../css/app.css');
+// require('../css/app.css');
+require('../less/main.less');
 window.myclick = ()=>{
    // document.getElementById('textarea').value;
     // var el = document.getElementById('myiframe');
