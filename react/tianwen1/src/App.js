@@ -8,6 +8,7 @@ import {
   getTableData,
   getTreeSelected,
 } from "./data/library";
+import Progress from "./progress.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
       selectLibraryIndex: 0,
       selectedChannel: [],
       tabledata: [],
+      percent: 0,
     };
   }
   componentDidMount() {
@@ -95,12 +97,30 @@ class App extends React.Component {
     console.log(data);
     return [data];
   };
-  checkTreeNode = (e)=>{
+  checkTreeNode = (e) => {
     console.log(e);
     this.setState({
-      selectedChannel: e
+      selectedChannel: e,
     });
-  }
+  };
+  addProgress = () => {
+    let { percent } = this.state;
+    if (percent < 100) {
+      percent += 10;
+    }
+    this.setState({
+      percent,
+    });
+  };
+  reduceProgress = () => {
+    let { percent } = this.state;
+    if (percent > 0) {
+      percent -= 10;
+    }
+    this.setState({
+      percent,
+    });
+  };
   render() {
     console.log("state", this.state);
     const treeData = this.getTreeData();
@@ -138,6 +158,9 @@ class App extends React.Component {
     console.log(treeData);
     return (
       <>
+        <Progress percent={this.state.percent}></Progress>
+        <button className="progressbutton" onClick={this.addProgress}>增加进度</button>
+        <button className="progressbutton" onClick={this.reduceProgress}>增加进度</button>
         <div className="_myApp_">
           <Button type="primary" onClick={this.openDialog}>
             打开弹出框
@@ -190,7 +213,7 @@ class App extends React.Component {
                     defaultExpandAll={true}
                     defaultCheckedKeys={this.state.selectedChannel}
                     checkedKeys={this.state.selectedChannel}
-                    onCheck = {(e)=>this.checkTreeNode(e)}
+                    onCheck={(e) => this.checkTreeNode(e)}
                   />
                 </div>
                 <div className="selectedlibrary_div">
@@ -199,7 +222,6 @@ class App extends React.Component {
                     columns={columns}
                     pagination={false}
                     size={"small"}
-
                   />
                 </div>
               </div>

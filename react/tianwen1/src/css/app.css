@@ -113,3 +113,21 @@ code {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+._progress_ .common {
+  width: 150px;
+  height: 22px;
+  border-radius: 2px;
+  background-color: #808080;
+}
+._progress_ .up {
+  margin-top: -22px;
+}
+._progress_ .normalcolor {
+  background-color: #008000;
+}
+._progress_ .warncolor {
+  background-color: #fe0b0c;
+}
+.progressbutton {
+  margin: 10px auto;
+}

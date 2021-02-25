@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "antd": "^4.12.3"
+    "antd": "^4.12.3",
+    "prop-types": "^15.7.2"
   }
 }
