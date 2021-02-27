@@ -4,6 +4,14 @@
 .blue {
   color: blue;
 }
+._qr_ .qrcode {
+  width: 100px;
+  height: 100px;
+}
+._qr_ .tip {
+  width: 100px;
+  height: 100px;
+}
 .width20 {
   width: 20px;
 }
@@ -112,6 +120,12 @@ code {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 ._progress_ .common {
   width: 150px;

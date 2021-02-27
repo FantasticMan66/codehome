@@ -9,7 +9,7 @@ import {
   getTreeSelected,
 } from "./data/library";
 import Progress from "./progress.js";
-
+import Qr from "./qr.js";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -159,6 +159,7 @@ class App extends React.Component {
     return (
       <>
         <Progress percent={this.state.percent}></Progress>
+        <Qr/>
         <button className="progressbutton" onClick={this.addProgress}>增加进度</button>
         <button className="progressbutton" onClick={this.reduceProgress}>增加进度</button>
         <div className="_myApp_">
