@@ -1,5 +1,7 @@
 // require('../css/app.css');
 require('../less/main.less');
+import {sum,testES6} from './util';
+console.log(sum);
 window.myclick = ()=>{
    // document.getElementById('textarea').value;
     // var el = document.getElementById('myiframe');
@@ -10,4 +12,6 @@ window.myclick = ()=>{
     mydocument.close();
     console.log(document);
     console.log(2);
+    console.log('sum(1+2)',sum(1,2));
+    testES6();
 }
